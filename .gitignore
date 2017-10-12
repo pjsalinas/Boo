@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+.env
+publish.sh
+./lambda/node_modules
+./dev
