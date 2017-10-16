@@ -1,7 +1,7 @@
 .DS_Store
-node_modules/
-.env
 publish.sh
 index.zip
-./lambda/node_modules
+node_modules/
+.env
 ./dev
+./lambda/node_modules

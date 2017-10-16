@@ -1,6 +1,8 @@
 /**
  * Amazon Alexa Skill
- * The Intent Schema, Custom Slot and Sample Utterances for this skill, as well as testing instructions are located at
+ * The Intent Schema, Custom Slot and Sample Utterances for this skill, 
+ * as well as testing instructions are located at
+ * 
  * https://github.com/pjsalinas/alexa/Boo
  */
 
@@ -62,11 +64,13 @@ const handlers = {
     this.attributes.speechOutput = sound;
 
     if(sound) {
+      // Optional. Ask Alexa to trigger the ligths
+      ifttt_maker();
+
       this.attributes.speechOutput = sound;
       this.attributes.repromptSpeech = this.t('SOUND_REPEAT_MESSAGE');
 
       this.response.speak(this.attributes.speechOutput);
-        //.listen(this.attributes.repromptSpeech);
       this.emit(':responseReady');
 
     } else {
@@ -84,7 +88,6 @@ const handlers = {
       this.attributes.repromptSpeech = repromptSpeech;
 
       this.response.speak(speechOutput);
-        //.listen(repromptSpeech);
       this.emit(':responseReady');
     }
 
@@ -120,12 +123,14 @@ const handlers = {
   'Unhandled': function () {
     this.attributes.speechOutput = this.t('HELP_MESSAGE');
     this.attributes.repromptSpeech = this.t('HELP_REPROMPT');
+
     this.response.speak(this.attributes.speechOutput)
       .listen(this.attributes.repromptSpeech);
     this.emit(':responseReady');
   },
  };
 
+ 
  exports.handler = function (event, context, callback) {
   const alexa = Alexa.handler(event, context, callback);
   alexa.APP_ID = APP_ID;
@@ -136,6 +141,16 @@ const handlers = {
   alexa.execute();
  };
 
- /*
-  Helper functions:
-  */
+
+ // ***************** Helper functions *****************
+
+/**
+ * Send a GET request to the IFTTT, http://www.ifttt.com, API
+ * to Blink the selected lights
+ */
+function ifttt_maker () {
+    var https = require('https');
+
+    var Url = 'https://maker.ifttt.com/trigger/Boo/with/key/' + process.env.IFTTT_MAKER_WEBHOOKS;
+    https.get(Url);
+}
