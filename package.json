@@ -1,0 +1,30 @@
+{
+  "name": "boo",
+  "version": "0.0.1",
+  "description": "An Alexa Skill to have fun during the Halloween season.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": false,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pjsalinas/Boo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pjsalinas/Boo/issues"
+  },
+  "homepage": "https://github.com/pjsalinas/Boo",
+  "keywords": [
+    "alexa",
+    "node",
+    "node.js",
+    "halloween",
+    "ifttt"
+  ],
+  "author": "Pedro J. Salinas <pedrojsalinas@gmail.com> (http://www.pechebot.com)",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-sdk": "^1.0.14"
+  }
+}

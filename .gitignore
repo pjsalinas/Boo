@@ -2,5 +2,6 @@
 node_modules/
 .env
 publish.sh
+index.zip
 ./lambda/node_modules
 ./dev

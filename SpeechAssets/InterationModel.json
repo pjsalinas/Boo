@@ -1,0 +1,86 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.RepeatIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "SoundIntent",
+      "samples": [
+        "to make the {Sound} sound",
+        "make the {Sound} sound",
+        "make a {Sound} sound",
+        "for {Sound} sound",
+        "for a {Sound} sound"
+      ],
+      "slots": [
+        {
+          "name": "Sound",
+          "type": "LIST_OF_SOUNDS",
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "LIST_OF_SOUNDS",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "jaws",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "dog",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "creepy",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "spooky",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "laugh",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "story",
+            "synonyms": []
+          }
+        }
+      ]
+    }
+  ]
+}
